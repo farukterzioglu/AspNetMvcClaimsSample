@@ -20,8 +20,11 @@ namespace AspNetMvcClaimsSample.WebApp.Controllers
             _loginService = new LoginService();
         }
 
-        public ActionResult Index()
+        [HttpGet]
+        [AllowAnonymous]
+        public ActionResult Login(string returnUrl)
         {
+            ViewBag.ReturnUrl = returnUrl;
             return View();
         }
 
@@ -42,7 +45,7 @@ namespace AspNetMvcClaimsSample.WebApp.Controllers
                 #region Signin
                 var claims = new List<Claim>();
 
-                claims.Add(new Claim(ClaimTypes.NameIdentifier, user.UserName));
+                claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()));
                 claims.Add(new Claim(ClaimTypes.Name, user.UserName));
 
                 var identity = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
