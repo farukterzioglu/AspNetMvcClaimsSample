@@ -21,7 +21,7 @@ namespace AspNetMvcClaimsSample.WebApp.Services
                 return new UserDTO()
                 { 
                     Name = "Test User",
-                    Id = 1,
+                    Id = 11,
                     UserName = "test",
                     UserType = (int)UserType.User
                 };
@@ -29,9 +29,17 @@ namespace AspNetMvcClaimsSample.WebApp.Services
                 return new UserDTO()
                 {
                     Name = "The Admin",
-                    Id = 99,
+                    Id = 999,
                     UserName = "admin",
                     UserType = (int)UserType.Admin
+                };
+            else if (userName == "operator")
+                return new UserDTO()
+                {
+                    Name = "The Operator",
+                    Id = 37,
+                    UserName = "operator",
+                    UserType = (int)UserType.Operator
                 };
 
             return null;

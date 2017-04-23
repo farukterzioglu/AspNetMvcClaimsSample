@@ -125,7 +125,9 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AnAuthorizedController.cs" />
+    <Compile Include="Controllers\CustomPagesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DefaultAuthenticationTypes.cs" />
     <Compile Include="Global.asax.cs">
@@ -150,6 +152,8 @@
     <Content Include="Views\AnAuthorized\Index.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\CustomPages\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

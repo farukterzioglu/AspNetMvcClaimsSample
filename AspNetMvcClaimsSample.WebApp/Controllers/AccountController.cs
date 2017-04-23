@@ -47,6 +47,7 @@ namespace AspNetMvcClaimsSample.WebApp.Controllers
 
                 claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()));
                 claims.Add(new Claim(ClaimTypes.Name, user.UserName));
+                claims.Add(new Claim(ClaimTypes.Role, ((UserType)user.UserType).ToString()));
 
                 var identity = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
 

@@ -2,9 +2,9 @@
 
 namespace AspNetMvcClaimsSample.WebApp.Controllers
 {
-    public class AnAuthorizedController : Controller
+    [Authorize(Roles = "Admin,Operator")]
+    public class CustomPagesController : Controller
     {
-        [Authorize]
         public ActionResult Index()
         {
             return View();

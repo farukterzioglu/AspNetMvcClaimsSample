@@ -8,7 +8,9 @@ namespace AspNetMvcClaimsSample.WebApp.Models
     public enum UserType
     {
         User = 1,
-        Admin = 99
+        Operator = 2,
+        Admin = 99,
+
     }
 
     public class UserDTO
