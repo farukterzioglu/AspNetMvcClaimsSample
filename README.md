@@ -1,4 +1,4 @@
-# Asp.Net MVC application with claims imlemented minimally. 
+# Asp.Net MVC application with claims and roles based authorization
 
 OWIN packages added.
 	Microsoft.Owin
