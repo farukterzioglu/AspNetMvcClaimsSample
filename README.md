@@ -1,4 +1,4 @@
-# Asp.Net MVC application with claims imlemented minimally. 
+# Asp.Net MVC application with claims implemented minimally. 
 
 OWIN packages added.
 	Microsoft.Owin
@@ -18,10 +18,10 @@ Default IIS authentication turned off
     </modules>
   </system.webServer>
 
-A simple fake LoginService imlemented. 
+A simple fake LoginService implemented. 
 	"AspNetMvcClaimsSample.WebApp.Services.LoginService"
 
-Simple login page imlemented
+Simple login page implemented
 	"AspNetMvcClaimsSample.WebApp.Controllers.AccountController"
 	Claims used in account controller
 
