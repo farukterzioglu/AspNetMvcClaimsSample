@@ -1,4 +1,4 @@
-# Asp.Net MVC application with claims imlemented minimally. 
+# Asp.Net MVC application with claims and roles based authorization and with custom department authorization
 
 OWIN packages added.
 	Microsoft.Owin
@@ -34,5 +34,16 @@ Login service extended for operator logins
 
 "Roles" based controllers added;
 	"Admin" controller and "CustomPages" controller added, decorated with [Authorize(Roles="[]")]
+	
+User data model updated
+	int DepartmentId { get; set; }
 
+New "departmentId" claim added
+	claims.Add(new Claim("departmentId", user.DepartmentId.ToString()));
 
+Custom authorization attribute implemented;
+	"AspNetMvcClaimsSample.WebApp.Filters.DeparmentAuthorizeAttribute"
+
+Department pages added and decorated with [DeparmentAuthorize(AuthorizedDepartments = "[DepartmentId]")] attribute
+
+Login service extended for department users

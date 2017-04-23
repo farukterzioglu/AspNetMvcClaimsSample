@@ -41,6 +41,25 @@ namespace AspNetMvcClaimsSample.WebApp.Services
                     UserName = "operator",
                     UserType = (int)UserType.Operator
                 };
+            else if (userName == "operator1")
+                return new UserDTO()
+                {
+                    Name = "The Operator 1",
+                    Id = 38,
+                    UserName = "operator1",
+                    UserType = (int)UserType.Operator,
+                    DepartmentId = 1
+                };
+            else if (userName == "operator2")
+                return new UserDTO()
+                {
+                    Name = "The Operator 2",
+                    Id = 39,
+                    UserName = "operator2",
+                    UserType = (int)UserType.Operator,
+                    DepartmentId = 2
+                };
+
 
             return null;
         }
