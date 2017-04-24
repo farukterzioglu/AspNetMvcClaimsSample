@@ -1,6 +1,6 @@
 # AspNetMvcClaimsSample
 
-This repository has three different branched for different features;
+This repository has three different branches for different features;
 
 "AspNetMvcClaims-Minimum" 
 Asp.Net MVC application with claims implemented minimally
